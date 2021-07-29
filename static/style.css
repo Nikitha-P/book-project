@@ -1,0 +1,16 @@
+.user{
+    font-size:25px;
+    font-weight:bolder;
+    font-style:500;
+    
+}
+
+.input{
+    width:1000px;
+    border-radius:5px;
+   
+    background-color:#ededed;
+}
+.heading{
+    text-align:center;
+}
