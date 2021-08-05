@@ -1,0 +1,58 @@
+<html>
+    <head>
+      <style>
+    
+         
+        
+      
+     
+         td{
+          color:navy;
+       
+        }
+        th{
+            color:black;
+            font-weight: bold;
+        }
+        body{
+            background: linear-gradient(to right, rgba(132, 250, 176, 0.5), rgba(143, 211, 244, 0.5));
+            
+          
+          
+            background-size:cover;
+      }
+      .head{
+        text-align:center;
+      }
+      </style>
+        
+    </head>
+    <body class="vh-100 bg-image" >
+        <h1 class="head pt-3">User Login Details</h1>
+        <table align="center" class="table table-inverse" border = "1" width = "500" >
+            <thead>
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Time stamp</th>
+              </tr>
+            </thead>
+              {% for i in s %}
+              <tr>
+              <td>{{i.fname}}
+              </td>
+             
+              <td>{{i.email}}
+              </td>
+              <td>{{i.time}}
+              </td>
+              </tr>
+              {% endfor %}
+          </table>
+        <!-- <p>{{s}}</p> -->
+        <!-- {% for i in s %}
+        <li>{{i.fname}} {{i.lname}} {{i.email}}</li>
+        {% endfor %} -->
+ 
+    </body>
+</html>

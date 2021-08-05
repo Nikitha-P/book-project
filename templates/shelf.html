@@ -1,0 +1,129 @@
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   
+    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+    <style>
+     
+      .gradient-custom-3 {
+            /* fallback for old browsers */
+            background: #84fab0;
+
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: -webkit-linear-gradient(to right, rgba(132, 250, 176, 0.5), rgba(143, 211, 244, 0.5));
+
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            background: linear-gradient(to right, rgba(132, 250, 176, 0.5), rgba(143, 211, 244, 0.5))
+            }
+      .gradient-custom-4 {
+            /* fallback for old browsers */
+            background: #84fab0;
+
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: -webkit-linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1));
+
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            background: linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1))
+            }
+      .a{
+            height:6%;
+              width:70%;
+        }
+      .d{
+        
+        color: white;
+        font-size:20px;
+        padding-right : 50px;
+    } 
+       td{
+        color:navy;
+       
+    }
+    th{
+        color:black;
+        font-weight: bold;
+    }
+    .dsh{
+      border-outline:solid;
+    }
+    .c{
+        margin-left: 30%;
+        margin-right: 30%;
+        
+        border-radius: 4px;
+        color:black;
+       
+    
+    }
+    body{
+        background: linear-gradient(to right, rgba(132, 250, 176, 0.5), rgba(143, 211, 244, 0.5));
+        
+       
+      
+        background-size:cover;
+      }
+      .navigation{
+        display : flex;
+        flex-direction : row;
+        align-items : center;
+        justify-content : flex-end;
+        
+    }
+     
+
+        </style>
+        </head>
+    <body align="center" class="vh-100 bg-image">
+     
+      <nav class="navbar navbar-inverse">
+            <div class="container-fluid navigation">
+                
+                    <ul class="nav navbar-nav">
+                   
+                    <li><a href="{{url_for('dashboard')}}" ><b class="d">Dashboard</b></a>
+                    </li>
+                    <li><a href="{{url_for('logout')}}"><b class="d">Logout</b></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    <h1 style="color:black">Book Shelf</h1>
+    <div class="c"><br>
+        
+        <table align="center" class="table table-inverse" border = "1px solid black" width = "500" height = "150">
+            <thead>
+              <tr>
+                
+                <th style="text-align:center" scope="col">ISBN</th>
+                <th style="text-align:center" scope="col">NAME</th>
+                <th style="text-align:center" scope="col">AUTHOR</th>
+                <th style="text-align:center" scope="col">YEAR</th>
+                <th style="text-align:center" scope="col">DELETE</th>
+              </tr>
+            </thead>
+              {% for i in m %}
+              <tr>
+                
+              <td style="text-align:center" >{{i.isbn}}
+              </td>
+              <td style="text-align:center" >{{i.name}}
+              </td>
+              <td style="text-align:center" >{{i.author}}
+              </td>
+              <td style="text-align:center" >{{i.year}}
+              </td>
+              <td style="text-align:center" ><div><form action="{{url_for('shelfdel')}}" method="POST">
+                  <button type="submit" name="shelfd" value={{i.isbn}} class="btn btn-info">Delete</button>
+                </form></div>
+                </td>
+              </tr>
+              {% endfor %}
+          </table><br>
+          </div>
+    
+    </body>
+</html>

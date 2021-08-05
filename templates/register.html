@@ -1,38 +1,445 @@
-<html>
-    <head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css	" rel="stylesheet" id="bootstrap-css">
+<script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" href="{{ url_for('static', filename='register.css') }}">
+<!--{% if e==0 %}
+<div class="d-flex justify-content-center align-items-center mt-5">
+    <div class="card">
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <li class="nav-item text-center"> 
+            <a class="nav-link active btl" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Login</a> </li>
+            <li class="nav-item text-center">
+             <a class="nav-link btr" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Signup</a> </li>
+        </ul>
         
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
-    </head>
-    <body>
-        <form action="{{ url_for('register') }}", method="POST">
-        
-        <div class="container mt-3">
-            <div class="row">
-                <div class="col-12">
-                    <h1 class="heading mt-3">Registration Page</h1>
-                    <label class="user">Username</label><br>
-                    <input class="input" type="text" name="Username" id="Username" placeholder="Enter your name" required><br>
+        <div class="tab-content" id="pills-tabContent">-->
+			<!-- <form> -->
+            <!--<div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+				<form action="{{url_for('login')}}" method="POST">
+                <div class="form px-4 pt-5"> 
+				<input type="email" name="email" id="email" class="form-control input-sm" placeholder="Email Address"><br>
+                <input type="password" name="password" id="password" class="form-control input-sm" placeholder="Password"><br>
+                <input type="submit" value="Login" class="btn btn-info btn-block"> 
+                &nbsp;&nbsp;<h4 style="color:red;">Enter correct email</h4>
                 </div>
-                <div class="col-12">
-                    <label class="user">Gmail</label><br>
-                    <input class="input" type="email" name="Gmail" id="Gmail" placeholder="Enter your mail id" required><br>
-                </div>
-                <div class="col-12">
-                    <label class="user">Password</label><br>
-                    <input class="input" type="password" name="Password" id="Password" placeholder="Enter your password" required><br>
-                </div>
-                <div class="col-12 mt-3">
-                    <button class="btn btn-primary">Register</button>
-                    <button class="btn btn-primary">Login</button>
-
-                </div>
+				</form>
+                
             </div>
-        </div>    
-        </form>
+		
+            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+				<form action="{{url_for('register')}}" method="POST">
+                <div class="form px-4"> 
+					
 
-    </body>
+				<input type="text" name="first_name" id="first_name" class="form-control input-sm floatlabel" placeholder="First Name">
+				<input type="text" name="last_name" id="last_name" class="form-control input-sm" placeholder="Last Name">
+				<input type="email" name="email" id="email" class="form-control input-sm" placeholder="Email Address">
+				<input type="password" name="password" id="password" class="form-control input-sm" placeholder="Password">
+				<input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-sm" placeholder="Confirm Password">
+				<input type="submit" value="Register" class="btn btn-info btn-block">
+				
+                 <input type="text" name="" class="form-control" placeholder="Name"> 
+                <input type="text" name="" class="form-control" placeholder="Email"> 
+                <input type="text" name="" class="form-control" placeholder="Phone"> 
+                <input type="text" name="" class="form-control" placeholder="Password"> 
+                <button class="btn btn-dark btn-block">Signup</button>  
+                </div>
+			</form>
+            </div>-->
+		<!-- </form> -->
+        <!--></div>-->
+    <!--</div>-->
+<!--</div>
+{% elif p==0 %}
+<div class="d-flex justify-content-center align-items-center mt-5">
+    <div class="card">
+      <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <li class="nav-item text-center"> 
+            <a class="nav-link active btl" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Login</a> </li>
+            <li class="nav-item text-center">
+             <a class="nav-link btr" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Signup</a> </li>
+        </ul>
+        <div class="tab-content" id="pills-tabContent">-->
+			<!-- <form> -->
+            <!--<div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+				<form action="{{url_for('login')}}" method="POST">
+                <div class="form px-4 pt-5"> 
+				<input type="email" name="email" id="email" class="form-control input-sm" placeholder="Email Address">
+                <input type="password" name="password" id="password" class="form-control input-sm" placeholder="Password">
+                <input type="submit" value="Login" class="btn btn-info btn-block"> 
+                &nbsp;&nbsp;<h4 style="color:red;">** Please enter correct Password</h4>
+                </div>
+				</form>
+               
+            </div>-->
+		<!-- </form> -->
+		<!-- <form action="{{url_for('register')}}" method="POST"></form> -->
+          <!--<div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+				<form action="{{url_for('register')}}" method="POST">
+                <div class="form px-4"> 
+					
+				<input type="text" name="first_name" id="first_name" class="form-control input-sm floatlabel" placeholder="First Name">
+				<input type="text" name="last_name" id="last_name" class="form-control input-sm" placeholder="Last Name">
+				<input type="email" name="email" id="email" class="form-control input-sm" placeholder="Email Address">
+				<input type="password" name="password" id="password" class="form-control input-sm" placeholder="Password">
+				<input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-sm" placeholder="Confirm Password">
+				<input type="submit" value="Register" class="btn btn-info btn-block">-->
+				
+                 <!-- <input type="text" name="" class="form-control" placeholder="Name"> 
+                <input type="text" name="" class="form-control" placeholder="Email"> 
+                <input type="text" name="" class="form-control" placeholder="Phone"> 
+                <input type="text" name="" class="form-control" placeholder="Password"> 
+                <button class="btn btn-dark btn-block">Signup</button>  -->
+                <!--</div>
+			</form>
+            </div>-->
+		<!-- </form> -->
+        <!--</div>
+    </div>
+</div>
+{% else %}
+<div class="d-flex justify-content-center align-items-center mt-5">
+    <div class="card">
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <li class="nav-item text-center"> 
+            <a class="nav-link active btl" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Login</a> </li>
+            <li class="nav-item text-center">
+             <a class="nav-link btr" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Signup</a> </li>
+        </ul>
+        <div class="tab-content" id="pills-tabContent">-->
+			<!-- <form> -->
+            <!--<div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+				<form action="{{url_for('login')}}" method="POST">
+                <div class="form px-4 pt-5"> 
+				<input type="email" name="email" id="email" class="form-control input-sm" placeholder="Email Address">
+                <input type="password" name="password" id="password" class="form-control input-sm" placeholder="Password">
+                <input type="submit" value="Login" class="btn btn-info btn-block"> 
+                </div>
+				</form>
+                
+            </div>-->
+		<!-- </form> -->
+		<!-- <form action="{{url_for('register')}}" method="POST"></form> -->
+            <!--<div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+				<form action="{{url_for('register')}}" method="POST">
+                <div class="form px-4"> 
+					
+				<input type="text" name="first_name" id="first_name" class="form-control input-sm floatlabel" placeholder="First Name">
+				<input type="text" name="last_name" id="last_name" class="form-control input-sm" placeholder="Last Name">
+				<input type="email" name="email" id="email" class="form-control input-sm" placeholder="Email Address">
+				<input type="password" name="password" id="password" class="form-control input-sm" placeholder="Password">
+				<input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-sm" placeholder="Confirm Password">
+				<input type="submit" value="Register" class="btn btn-info btn-block">
+				
+                 <input type="text" name="" class="form-control" placeholder="Name"> 
+                <input type="text" name="" class="form-control" placeholder="Email"> 
+                <input type="text" name="" class="form-control" placeholder="Phone"> 
+                <input type="text" name="" class="form-control" placeholder="Password"> 
+                <button class="btn btn-dark btn-block">Signup</button>  -->
+                <!--</div>
+			</form>
+            </div>
+		</form> -->
+        <!--</div>
+    </div>
+</div>
+
+{% endif %}-->
+<html>
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css	" rel="stylesheet" id="bootstrap-css">
+    <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+        .gradient-custom-3 {
+        /* fallback for old browsers */
+        background: #84fab0;
+
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: -webkit-linear-gradient(to right, rgba(132, 250, 176, 0.5), rgba(143, 211, 244, 0.5));
+
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background: linear-gradient(to right, rgba(132, 250, 176, 0.5), rgba(143, 211, 244, 0.5))
+        }
+        .gradient-custom-4 {
+        /* fallback for old browsers */
+        background: #84fab0;
+
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: -webkit-linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1));
+
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background: linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1))
+        }
+    </style>
+</head>
+<body>
+{% if e==0 %}
+
+<div class="vh-100 bg-image" id="register" style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.jpg');">
+  <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+          <div class="card" style="border-radius: 15px;">
+            <div class="card-body p-5">
+              <h2 class="text-uppercase text-center mb-5">Register</h2>
+
+                <form action="{{url_for('register')}}" method="POST">
+
+                <div class="form-outline mb-4">
+                  <label class="form-label" for="name">Your Name</label>
+                  <input type="text" name="name" id="name" class="form-control form-control-lg" />
+                 
+                </div>
+
+                <div class="form-outline mb-4">
+                  <label class="form-label" for="email">Your Email</label>
+                  <input type="email" name="email" id="email" class="form-control form-control-lg" />
+                
+                </div>
+
+                <div class="form-outline mb-4">
+                  <label class="form-label" for="password">Password</label>
+                  <input type="password" name="password" id="password" class="form-control form-control-lg" />
+                  
+                </div>
+
+                <div class="form-outline mb-4">
+                  <label class="form-label" for="password_confirm">Repeat your password</label>
+                  <input type="password" id="password_confirm" class="form-control form-control-lg" />
+                  
+                </div>
+
+               
+
+                <div class="d-flex justify-content-center">
+                  <input type="submit" value="Register" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body"></input>
+                </div>
+
+                <p class="text-center text-muted mt-5 mb-0">Have already an account? <a href="#login" class="fw-bold text-body"><u>Login here</u></a></p>
+
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="vh-100 bg-image" id="login" style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.jpg');">
+      <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+        <div class="container h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+              <div class="card" style="border-radius: 15px;">
+                <div class="card-body p-5">
+                  <h2 class="text-uppercase text-center mb-5">Login</h2>
+
+                  <form action="{{url_for('login')}}" method="POST">
+
+                    <div class="form-outline mb-4">
+                      <label class="form-label" for="name">Your email</label>
+                      <input type="text" id="email" class="form-control form-control-lg" />
+                    
+                    </div>
+
+                    <div class="form-outline mb-4">
+                      <label class="form-label" for="password">Password</label>
+                      <input type="password" id="password" class="form-control form-control-lg" />
+                    
+                    </div>
+                
+                    <input type="submit" value="Login" class="btn btn-info btn-block"> &nbsp;&nbsp;<h5 style="color:red;">Enter correct email</h5>
+                    <p class="text-center text-muted mt-5 mb-0">New User? <a href="#register" class="fw-bold text-body"><u>Register Here</u></a></p>
+                  </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% elif p==0 %}
+<div class="vh-100 bg-image" id="register" style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.jpg');">
+  <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+          <div class="card" style="border-radius: 15px;">
+            <div class="card-body p-5">
+              <h2 class="text-uppercase text-center mb-5">Register</h2>
+
+                <form action="{{url_for('register')}}" method="POST">
+
+                  <div class="form-outline mb-4">
+                    <label class="form-label" for="name">Your Name</label>
+                    <input type="text" id="name" class="form-control form-control-lg" />
+                  
+                  </div>
+
+                  <div class="form-outline mb-4">
+                      <label class="form-label" for="email">Your Email</label>
+                    <input type="email" id="email" class="form-control form-control-lg" />
+                  
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    <label class="form-label" for="password">Password</label>
+                    <input type="password" id="password" class="form-control form-control-lg" />
+                    
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    <label class="form-label" for="password_confirm">Repeat your password</label>
+                    <input type="password" id="password_confirm" class="form-control form-control-lg" />
+                    
+                  </div>
+
+                
+
+                  <div class="d-flex justify-content-center">
+                    <input type="submit" value="Register" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body"></input>
+                  </div>
+
+                  <p class="text-center text-muted mt-5 mb-0">Have already an account? <a href="#login" class="fw-bold text-body"><u>Login here</u></a></p>
+
+                </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="vh-100 bg-image" id="login" style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.jpg');">
+    <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+        <div class="container h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+              <div class="card" style="border-radius: 15px;">
+                <div class="card-body p-5">
+                  <h2 class="text-uppercase text-center mb-5">Login</h2>
+
+                  <form action="{{url_for('login')}}" method="POST">
+
+                    <div class="form-outline mb-4">
+                      <label class="form-label" for="name">Your email</label>
+                      <input type="text" id="email" class="form-control form-control-lg" />
+                    
+                    </div>
+
+                    <div class="form-outline mb-4">
+                      <label class="form-label" for="password">Password</label>
+                      <input type="password" id="password" class="form-control form-control-lg" />
+                    
+                    </div>
+                
+                    <input type="submit" value="Login" class="btn btn-info btn-block"> 
+                  &nbsp;&nbsp;<h4 style="color:red;">Enter correct password</h4>
+                    <p class="text-center text-muted mt-5 mb-0">New User? <a href="#register" class="fw-bold text-body"><u>Register Here</u></a></p>
+                </form>
+                </div>
+              </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% else %}
+
+<div class="vh-100 bg-image" id="register" style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.jpg');">
+  <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+          <div class="card" style="border-radius: 15px;">
+            <div class="card-body p-5">
+              <h2 class="text-uppercase text-center mb-5">Register</h2>
+
+              <form action="{{url_for('register')}}" method="POST">
+
+                <div class="form-outline mb-4">
+                  <label class="form-label" for="name">Your Name</label>
+                  <input type="text" name="name" id="name" class="form-control form-control-lg" />
+                 
+                </div>
+
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="email">Your Email</label>
+                  <input type="email" name="email" id="email" class="form-control form-control-lg" />
+                
+                </div>
+
+                <div class="form-outline mb-4">
+                  <label class="form-label" for="password">Password</label>
+                  <input type="password" name="password" id="password" class="form-control form-control-lg" />
+                  
+                </div>
+
+                <div class="form-outline mb-4">
+                  <label class="form-label" for="password_confirm">Repeat your password</label>
+                  <input type="password" name="password" id="password_confirm" class="form-control form-control-lg" />
+                  
+                </div>
+
+              
+
+                <div class="d-flex justify-content-center">
+                  <input type="submit" value="Register" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body"></input>
+                </div>
+
+                <p class="text-center text-muted mt-5 mb-0">Have already an account? <a href="#login" class="fw-bold text-body"><u>Login here</u></a></p>
+
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="vh-100 bg-image" id="login" style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.jpg');">
+    <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+        <div class="container h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+            <div class="card" style="border-radius: 15px;">
+                <div class="card-body p-5">
+                <h2 class="text-uppercase text-center mb-5">Login</h2>
+
+                <form action="{{url_for('login')}}" method="POST">
+
+                    <div class="form-outline mb-4">
+                      <label class="form-label" for="name">Your email</label>
+                      <input type="text" name="email" id="email" class="form-control form-control-lg" />
+                    
+                    </div>
+
+                    <div class="form-outline mb-4">
+                      <label class="form-label" for="password">Password</label>
+                      <input type="password" name="password" id="password" class="form-control form-control-lg" />
+                      
+                    </div>
+                      <input type="submit" value="Login" class="btn btn-info btn-block"> 
+                      <p class="text-center text-muted mt-5 mb-0">New User? <a href="#register" class="fw-bold text-body"><u>Register Here</u></a></p>
+                </form>
+                </div>
+                </div>
+                </div></div></div>
+    </div>
+  </div>
+  
+  {% endif %}
+
+
+</body>
 </html>
